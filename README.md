@@ -1,6 +1,6 @@
 # TemporalKit
 
-An easy solution for adding Temporal Stability to a Stable Diffusion Render via an automatic1111 extension
+An all in one solution for adding Temporal Stability to a Stable Diffusion Render via an automatic1111 extension
 
 *You must install FFMPEG to path before running this*
 
@@ -11,6 +11,24 @@ https://twitter.com/CiaraRowles1/status/1645923461343363072
 And a batch demonstration here:
 
 https://mobile.twitter.com/CiaraRowles1/status/1646458056803250178
+
+Ebsynth tutorial:
+
+https://twitter.com/CiaraRowles1/status/1648462374125576192
+
+NOTE: EBSYNTH DOES NOT REGISTER THE KEYFRAMES IF YOU USE ABOVE 20, 
+
+Ebsynth split frames tutorial:
+
+https://www.youtube.com/watch?v=z3YNHiuvxyg&ab_channel=CiaraRowles
+
+
+
+Example results you can get:
+
+https://user-images.githubusercontent.com/13116982/234425054-9a1bbf30-93a8-4f5b-9e80-4376ab3c510a.mp4
+
+
 
 
 The values in the extension are as follows
@@ -39,21 +57,12 @@ Q: my video has smearing
 
 A: use a higher fps and/or lower batchnumber, the closer together the keyframes the less artifacts.
 
-Q: my video jumps about
-
-A: make sure to set the plate resolution to a multiple of 8 and your frame number and diffuse at that resolution
-
-Q: the video goes blurry at the end
-
-A: remove the last non fully sized plate before processing.
-
 #TODO
 - set up diffusion based upscaling for the plates output 
-- constrain the input resolutions to multiples of 3 and 8
 - get the img2img button working with batch processing.
 - add a check to see if the output folder was added.
 - fix that weird shutdown error it gives after running
-- fix the thing it does where it sometimes generates an extra tab when making batches 
 - hook up to the api.
+- flowmaps from game engine export\import support
 
 Thanks to RAFT for the optical flow system.
